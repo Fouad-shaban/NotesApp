@@ -103,4 +103,7 @@
   .icon-btn{
     @apply cursor-pointer  text-xl;
   }
+  .input-label{
+    @apply text-sm text-slate-500
+  }
 }
