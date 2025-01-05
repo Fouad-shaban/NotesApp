@@ -9,6 +9,7 @@ const AddEditNotes = ({onClose}) => {
   const [tags, setTags] = useState([]);
 
   
+  
   return (
     <div className="relative">
       <button
@@ -39,6 +40,7 @@ const AddEditNotes = ({onClose}) => {
           onChange={({ target }) => {
             setContent(target.value);
           }}
+          
         />
       </div>
       <div className=" flex flex-col gap-2">
