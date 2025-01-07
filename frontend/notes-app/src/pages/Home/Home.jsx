@@ -48,13 +48,19 @@ style = {{
 contentLabel = "Add Edit Note Modal"
 className="w-[50%] h-[70%] bg-white rounded-md shadow-lg p-4 overflow-auto mx-auto mt-24"
 >
-  <AddEditNotes onClose={()=>{
+  <AddEditNotes 
+  type={openAddEditModal.type}
+  noteData={openAddEditModal.data}
+  
+  onClose={()=>{
     setOpenAddEditModal({
       isShown: false,
       type: 'add',
       data: null
     })
-  }}/>
+  }}
+  
+  />
 </Modal>
 
       </div>

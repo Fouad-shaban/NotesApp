@@ -50,7 +50,6 @@ const TagInput = ({ tags, setTags }) => {
       )}
 
       <div className="flex gap-2 mt-3">
-        <label className="input-label">Tags</label>
 
         <input
           type="text"
