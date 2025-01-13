@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import moment from "moment";
 import { MdOutlinePushPin, MdCreate, MdDelete } from "react-icons/md";
 
 const NoteCard = ({
@@ -13,7 +14,7 @@ const NoteCard = ({
 }) => {
   return (
     <div>
-      <div className=" bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition duration-300">
+      <div className=" bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition duration-300 h-full">
         <div>
             <div className="flex justify-self-start">
           <MdOutlinePushPin
@@ -25,12 +26,12 @@ const NoteCard = ({
             <h6 className={`font-bold text-lg ${isPinned?"text-indigo-500":"text-black"} `}>{title} </h6>
             </div>
         </div>
-        <span className="text-xs text-gray-500">{date}</span>
+        <span className="text-xs text-gray-500">{moment(date).format('Do MMM YYYY')}</span>
         <p className="text-gray-600 text-sm mt-2 overflow-hidden">
           {content?.slice(0, 60)}
         </p>
         <div>
-          <span className="text-xs text-gray-400">{tags}</span>
+          <span className="text-xs text-gray-400">{tags.map((item)=>`#${item}`)}</span>
         </div>
         <div className="flex justify-end gap-4">
           <MdCreate
