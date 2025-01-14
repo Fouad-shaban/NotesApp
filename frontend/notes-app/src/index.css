@@ -101,7 +101,7 @@
     background-color:#f3f4f6 ;
   }
   .icon-btn{
-    @apply cursor-pointer  text-xl;
+    @apply cursor-pointer  text-xl hover:text-indigo-500;
   }
   .input-label{
     @apply text-sm text-slate-500
